@@ -69,3 +69,29 @@ input {
     color: #fff;
     text-decoration: none;
  }
+
+ #error {
+    width: 100%;
+    padding-bottom: 12px;
+    color: red;
+    margin-left: 20px;
+ }
+
+ #entries {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #entries td, #entries th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #entries th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #272b30;
+    color: white;
+  }
+  
