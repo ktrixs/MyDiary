@@ -94,4 +94,13 @@ input {
     background-color: #272b30;
     color: white;
   }
+
+  .modify {
+    padding: 1px 1px 1px 3px;
+    border: 1px solid black;
+    margin: 10px;
+    border-bottom-width: 3px;
+    border-radius: 2rem;
+    text-decoration: none;     
+  }
   
