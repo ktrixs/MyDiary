@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
+body{
+  font-family: 'Gayathri', sans-serif;
+}
+.divide {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+  color: black;
+}
+
+.right {
+  right: 0;
+  text-align: center;
+  list-style-type: none;
+  background-image: url("../images/sign.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+input {
+  background-color: #b3b4ba;
+  width: 75%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  font-family: 'Gayathri', sans-serif;
+}
+
+.button {
+  background-color: #575966;
+  border: none;
+  color: black;
+  width: 90%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+ }
