@@ -96,9 +96,9 @@ input {
   }
 
   .modify {
-    padding: 1px 1px 1px 3px;
+    padding: 1px 1px 1px 1px;
     border: 1px solid black;
-    margin: 10px;
+    margin: 1px;
     border-bottom-width: 3px;
     border-radius: 2rem;
     text-decoration: none;     
