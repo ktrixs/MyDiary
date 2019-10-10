@@ -103,4 +103,24 @@ input {
     border-radius: 2rem;
     text-decoration: none;     
   }
+
+  .button-add {
+    background-color: #575966;
+    border: none;
+    color: black;
+    width: 40%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  textarea {
+    background-color: #b3b4ba;
+    width: 65%;
+    padding: 42px 50px;
+    margin: 20px 0;
+    font-family: 'Gayathri', sans-serif;
+  }
   
