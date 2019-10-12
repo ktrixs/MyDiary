@@ -219,3 +219,8 @@ li a.active {
   color: white;
   background-color: #575966;
 }
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
