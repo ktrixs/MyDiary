@@ -13,9 +13,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../UI/index.html'));
 });
 
-app.listen(port, errs => {
-  if (errs) {
-    console.log(errs);
+app.listen(port, err => {
+  if (err) {
+    console.log(err);
   }
   debug(`running on port ${chalk.green(port)}`);
 });
