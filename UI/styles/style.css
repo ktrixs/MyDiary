@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Gayathri&display=swap');
-body{
+body {
   font-family: 'Gayathri', sans-serif;
 }
 .divide {
@@ -23,7 +23,7 @@ body{
   right: 0;
   text-align: center;
   list-style-type: none;
-  background-image: url("../images/sign.jpg");
+  background-image: url('../images/sign.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,110 +58,111 @@ input {
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    left: 25%;
-    width: 50%;
- }
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 25%;
+  width: 50%;
+}
 
- b > a {
-    color: #fff;
-    text-decoration: none;
- }
+b > a {
+  color: #fff;
+  text-decoration: none;
+}
 
- #error {
-    width: 100%;
-    padding-bottom: 12px;
-    color: red;
-    margin-left: 20px;
- }
+#error {
+  width: 100%;
+  padding-bottom: 12px;
+  color: red;
+  margin-left: 20px;
+}
 
- #entries {
-    margin-top: 20px;
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #fff;
-  }
-  
-  #entries td, #entries th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #entries th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #575966;
-    color: white;
-  }
+#entries {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+}
 
-  .modify {
-    padding: 1px 1px 1px 1px;
-    border: 1px solid black;
-    margin: 1px;
-    border-bottom-width: 3px;
-    border-radius: 2rem;
-    text-decoration: none;     
-  }
+#entries td,
+#entries th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-  .button-add {
-    background-color: #575966;
-    border: none;
-    color: black;
-    width: 40%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    padding: 12px 20px;
-  }
+#entries th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #575966;
+  color: white;
+}
 
-  textarea {
-    background-color: #b3b4ba;
-    width: 65%;
-    padding: 32px 40px;
-    margin: 20px 0;
-    font-family: 'Gayathri', sans-serif;
-  }
-  
-  img {
-    width:150px;
-    height: 150px;
-    border-radius: 100%;
-  }
+.modify {
+  padding: 1px 1px 1px 1px;
+  border: 1px solid black;
+  margin: 1px;
+  border-bottom-width: 3px;
+  border-radius: 2rem;
+  text-decoration: none;
+}
 
-  .body {
-    right: 0;
-    text-align: center;
-    list-style-type: none;
-    background-image: url("../images/sign.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
-  }
+.button-add {
+  background-color: #575966;
+  border: none;
+  color: black;
+  width: 40%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  padding: 12px 20px;
+}
 
-  .bg-white {
-    background-color: #fff;
-    width: 400px;
-    height: 500px;
-    margin: 30px auto;
-    padding: 20px 0;
-    border-radius: 12px;
-    overflow: hidden;
-  }
+textarea {
+  background-color: #b3b4ba;
+  width: 65%;
+  padding: 32px 40px;
+  margin: 20px 0;
+  font-family: 'Gayathri', sans-serif;
+}
 
-  .switch {
-    display: inline-block;
-    position: relative;
-    width: 50px;
-    height: 25px;
-    border-radius: 20px;
-    background: #dfd9ea;
-    transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    vertical-align: middle;
-    cursor: pointer;
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.body {
+  right: 0;
+  text-align: center;
+  list-style-type: none;
+  background-image: url('../images/sign.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-white {
+  background-color: #fff;
+  width: 400px;
+  height: 500px;
+  margin: 30px auto;
+  padding: 20px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  border-radius: 20px;
+  background: #dfd9ea;
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
 }
 
 .switch::before {
@@ -173,11 +174,13 @@ input {
   height: 22px;
   background: #fafafa;
   border-radius: 50%;
-  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .switch:active::before {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
 }
 input:checked + .switch {
   background: #72da67;
@@ -187,7 +190,7 @@ input:checked + .switch::before {
   background: #fff;
 }
 input:checked + .switch:active::before {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
 }
 
 ul {

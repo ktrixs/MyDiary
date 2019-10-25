@@ -4,9 +4,10 @@
   "description": "An online journal where users can pen down their thoughts and feelings.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set DEBUG=index && nodemon server/index.js",
-    "lint": "eslint server/index.js"
+    "start": "set DEBUG=index && nodemon server/index.js --exec babel-node",
+    "lint": "eslint server/index.js",
+    "test": "mocha --reporter progress ./server/tests/testSetup.js \"UI/**/*.test.js\"",
+    "build": "babel server -d build"
   },
   "repository": {
     "type": "git",
@@ -22,13 +23,22 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
     "chalk": "^2.4.2",
     "debug": "^4.1.1",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "moment": "^2.24.0",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "uuid": "^3.3.3"
   },
   "nodemonConfig": {
     "restartable": "rs",
