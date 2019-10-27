@@ -19,3 +19,20 @@ router.get('/:id', function(req, res) {
     res.sendStatus(404);
   }
 });
+
+router.post('/', function(req, res) {
+  let itemIds = data.map(item => item.id);
+  let newId = itemIds.length > 0 ? Math.max.apply(Math, itemIds) + 1 : 1;
+
+  let newItem = {
+    id: newId,
+    title: req.body.title,
+    content: req.body.content,
+    notification: false,
+    createdOn: new Date()
+  };
+
+  data.push(newItem);
+
+  res.status(201).json(newItem);
+});
