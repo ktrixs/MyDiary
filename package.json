@@ -4,7 +4,8 @@
   "description": "An online journal where users can pen down their thoughts and feelings.",
   "main": "index.js",
   "scripts": {
-    "start": "set DEBUG=index && nodemon server/index.js --exec babel-node",
+    "dev": "set DEBUG=index && nodemon server/index.js --exec babel-node",
+    "start": "node start",
     "lint": "eslint server/index.js",
     "test": "mocha --reporter progress ./server/tests/testSetup.js \"UI/**/*.test.js\"",
     "build": "babel server -d build"
