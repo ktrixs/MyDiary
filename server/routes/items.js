@@ -6,8 +6,6 @@ router.get('/', function(req, res) {
   res.status(200).json(data);
 });
 
-module.exports = router;
-
 router.get('/:id', function(req, res) {
   let found = data.find(function(item) {
     return item.id === parseInt(req.params.id);
@@ -36,3 +34,28 @@ router.post('/', function(req, res) {
 
   res.status(201).json(newItem);
 });
+
+router.put('/:id', function(req, res) {
+  let found = data.find(function(item) {
+    return item.id === parseInt(req.params.id);
+  });
+
+  if (found) {
+    let updated = {
+      id: found.id,
+      title: req.body.title,
+      content: req.body.content,
+      notification: req.body.notification
+    };
+
+    let targetIndex = data.indexOf(found);
+
+    data.splice(targetIndex, 1, updated);
+
+    res.send(201).json(data);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
+module.exports = router;

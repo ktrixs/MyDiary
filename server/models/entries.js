@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 1,
     title: 'Create dinner reservation',
@@ -35,3 +35,11 @@ export const data = [
     createdOn: new Date()
   }
 ];
+
+const dataModel = {
+  title: { type: String },
+  content: { type: String },
+  notification: { type: Boolean, default: false }
+};
+
+export { data, dataModel };
