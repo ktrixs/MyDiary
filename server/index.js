@@ -5,17 +5,23 @@ const chalk = require('chalk');
 const debug = require('debug')('app');
 const morgan = require('morgan');
 const bodyParse = require('body-parser');
-const itemsRouter = require('./routes/items');
+import { data } from './models/entries';
+const diaryRouter = require('./routes/diaryRouter')(data);
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+app.use(bodyParse.urlencoded({ extended: true }));
+app.use(bodyParse.json());
+
+app.use('/api/v1/entries', diaryRouter);  
 
 app.use(express.json());
 app.use(morgan('tiny'));
 app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
 app.use(express.static(path.join(__dirname, '../UI')));
-app.use('/api/v1/entries', itemsRouter);
+// app.use('/api/v1/entries', itemsRouter);
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../UI/index.html'));
 });

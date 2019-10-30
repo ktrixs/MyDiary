@@ -6,86 +6,29 @@
     <title></title>
     <link rel="stylesheet" href="./styles/style.css">
   </head>
-  <body>
-      <div class="divide left">
-          <header>
-              <ul>
-                  <li><a class="active" href="#">SignIn or SignUp</a></li>
-                  <li><a href="./entries.html">Entries</a></li>
-                  <li><a href="./profile.html">Profile</a></li>
-              </ul>
-          </header>
-          <div id="error"></div>
-        <form id="form">
-          <div id="center">
-            <h1>Sign Up</h1>
-          <input type="text" 
-          id="fname" 
-          name="fname" 
-          placeholder="First Name"
-          pattern="[a-zA-Z]{5,}"
-          maxlength="20"
-          required
-          class="form-control">
-
-          <div class="validation-messages">
-            <span data-rule="valueMissing" class="hide">The Firstname is required</span>
-            <span data-rule="patternMismatch" class="hide">Must be a series of alpha 
-              characters only (min 5, max 20).</span>
+  <body class="body">
+      <header>
+          <ul>
+              <li><a href="./index.html">My Diary</a></li>
+          </ul>
+      </header>
+      <div class="">
+          <form class="bg-white-sign" action="./login.html">
+            <div id="center">
+              <h1 class="sign">Sign Up</h1>
+            <input class="form" type="text" name="name" placeholder="Full Name">
+            <input class="form" type="email" name="email" placeholder="email">
+            <input class="form" type="password" name="password" placeholder="password">
+            <input type="submit" value="Sign Up" class="button-login"><br>
+             You have an Account ? <a href="./login.html">Login</a>
           </div>
-
-          <input type="text" 
-          id="lname" 
-          name="lname" 
-          placeholder="Last Name"
-          pattern="[a-zA-Z]{5,}"
-          maxlength="20"
-          required
-          class="form-control"          
-          >
-
-          <div class="validation-messages">
-            <span data-rule="valueMissing" class="hide">The Lastname is required</span>
-            <span data-rule="patternMismatch" class="hide">Must be a series of alpha 
-              characters only (min 5, max 30).</span>
-          </div>
-
-          <input type="email" 
-          id="email" 
-          name="email" 
-          placeholder="Email"
-          title="Email address is required"
-          required
-          class="form-control">
-
-          <div class="validation-messages">
-            <span data-rule="valueMissing" class="hide">
-              An email address is required.</span>
-            <span data-rule="typeMismatch" class="hide">
-              Special characters are not allowed.</span>
-          </div>
-          
-          <input type="password" 
-          id="password" 
-          name="password" 
-          placeholder="Password"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          required
-          class="form-control">
-
-          <div class="validation-messages">
-            <span data-rule="valueMissing" class="hide">Password is required</span>
-            <span data-rule="patternMismatch" class="hide">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</span>
-          </div>
-          <button type="button" id="login-button" class="button">Register</button>
-          </div>
-        </form>
-    </div>
-        <div class="divide right">
-            <div class="container">
-                <p> <h1> Already have an Account</h1><b><a href="./index.html">Click here to Login</a></b></p>
-            </div>
-        </div>
+          </form>
+  </div>
+  <footer>
+      <p class="footer">
+              Copyright 2019. Todos los datos proporcionados en esta página son falsos, inventados, cualquier similitud es pura coincidencia. Solo a modo de Ejemplo y demostración.
+          </p>
+</footer>
         <script src="./scripts/script.js"></script>
   </body>
 </html>
