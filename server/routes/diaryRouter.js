@@ -5,10 +5,11 @@ import {
   getEntry,
   updateEntry
 } from '../controllers/entryController';
+import auth from '../middleware/authentication'
 
 const routes = () => {
   const diaryRouter = express.Router();
-
+  diaryRouter.use(auth);
   diaryRouter
     .route('/')
     .post(createEntry)

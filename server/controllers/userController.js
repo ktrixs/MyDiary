@@ -1,4 +1,6 @@
 import { users } from '../models/users';
+import { passwordHasher, matchPassword } from '../helpers/password';
+import jwt from 'jsonwebtoken';
 
 const isEmail = (email) => {
   if (typeof email !== 'string') {
@@ -10,36 +12,79 @@ const isEmail = (email) => {
 };
 
 
-export const createUser = (req, res) => {
+
+ const createUser = async (req, res) => {
   let itemIds = users.map(item => item.id);
   let newId = itemIds.length > 0 ? Math.max.apply(Math, itemIds) + 1 : 1;
+  const { firstName, lastName, email, password } = req.body;
+  const passwordHarshed =  await passwordHasher(password, 10);
   let newUser = {
     id: newId,
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    password: req.body.password
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: passwordHarshed
   };
 
-    if (!isEmail(newUser.email)) {
-      res.sendStatus(404);
-    }
-    if (typeof newUser.password !== 'string') {
-      res.sendStatus(404);
-    }
+  if (!isEmail(newUser.email)) {
+    res.sendStatus(404);
+  }
+  if (typeof newUser.password !== 'string') {
+    res.sendStatus(404);
+  }
 
 
+  const token = jwt.sign({
+    email
+  }, 'titi');
   users.push(newUser);
-  res.status(201).send(newUser);
+  res.status(201).json({
+    status: 201,
+    message: "User Successfully Created",
+    token,
+    user: {
+      id: newUser.id,
+      firstName: newUser.firstName,
+      lastName: newUser.lastName,
+      email: newUser.email
+    }
+  });
 };
 
-export const userLogin = (req, res) => {
-  const user = {
-    email: req.body.email,
-    password: req.body.password
-  };
+const userLogin = async (req, res) => {
+  const { email, password } = req.body;
 
+ const foundUser = users.find(us => us.email === email);
+ 
+ if(!foundUser) {
+   return res.sendStatus(404).send(`User with this ${email} was not found`);
+ }
 
-  users.find(user);
-  res.status(201).send(user);
+ const foundPassword = matchPassword(password, foundUser.password);
+
+ if(!foundPassword) {
+   return res.status(401).json({
+     status: 401,
+     message:  "email or password is incorrect"
+     }
+   );
+ }
+
+ const token = jwt.sign({ 
+   email 
+  }, 'titi');
+
+ return res.status(200).json({
+   status: 200,
+   message: "Logged in",
+   token,
+   user: {
+     id: foundUser.id,
+     firstName: foundUser.firstName,
+     lastName: foundUser.lastName,
+     email: foundUser.email
+   }
+ });
 };
+
+export { createUser, userLogin }
